@@ -1,6 +1,6 @@
-    import { SiGhostery } from "react-icons/si";
-    import { BiWallet } from "react-icons/bi";
-    import { AiFillHeart } from "react-icons/ai";
+    import { FaCampground } from "react-icons/fa";
+    import { TbCampfire } from "react-icons/tb";
+
     import { Link } from "react-router-dom";
     import axios from "axios";
     import { useEffect, useState } from "react";
@@ -41,11 +41,11 @@
 
 
     return (
-        <header className="max-w-screen-xl mx-auto p-4 flex justify-between items-center font-bold">
+        <header className="max-w-screen-xl mx-auto pt-4 mb-4 flex justify-between items-center font-bold">
         <Link to="/">
-            <div className="flex items-center text-gray-400">
-            <SiGhostery size={28} />
-            <div className="ml-1 text-2xl">서잼민-NFT</div>
+            <div className="flex items-center text-red-400">
+            <TbCampfire size={28} />
+            <div className="ml-1 text-2xl">Camp-Spot</div>
             </div>
         </Link>
 
@@ -60,8 +60,8 @@
             )}
             {account ? (
             <div className="flex items-center p-2 bg-gray-800 rounded-full ml-4">
-                <div className="bg-blue-300 w-6 h-6 rounded-full flex justify-center items-center">
-                <AiFillHeart />
+                <div className="bg-red-300 w-6 h-6 rounded-full flex justify-center items-center">
+                <FaCampground />
                 </div>
                 <div className="ml-1">
                 {account.substring(0, 4)}...
@@ -73,8 +73,8 @@
                 className="flex items-center p-2 bg-gray-800 rounded-full ml-4"
                 onClick={onClickAccount}
             >
-                <div className="bg-blue-300 w-6 h-6 rounded-full flex justify-center items-center">
-                <BiWallet />
+                <div className="bg-red-300 w-6 h-6 rounded-full flex justify-center items-center">
+                <FaCampground />
                 </div>
                 <div className="ml-1">Connect</div>
             </button>

@@ -12,7 +12,7 @@ const Nfts = ({ page, mintedNft }) => {
 
       setNfts();
 
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < 5; i++) {
         const tokenId = i + 1 + (p - 1) * 10;
 
         let response = await axios.get(

@@ -3,13 +3,21 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      colors: {
-        main: "#C44FEB",
+      keyframes: {
+        slider: { //무한슬라이더
+          '0%': {
+            transform: 'translateX(0px)',
+          },
+          '100%': {
+            transform: 'translateX(-300px)',
+          },
+        },
+        },
+      animation: {
+        slider: 'slider 5s linear infinite',
       },
-      fontFamily: {
-        sans: ["Pretendard", "Arial", "sans-serif"],
-      },
-    },
+      
+    }, //여기까지
   },
   plugins: [],
 };

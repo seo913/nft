@@ -1,5 +1,5 @@
-import { SiGhostery } from "react-icons/si";
 import { Link } from "react-router-dom";
+import { TbCampfire } from "react-icons/tb";
 
 
 function NftCard({tokenId, metadata, mintedNft}){
@@ -11,16 +11,16 @@ function NftCard({tokenId, metadata, mintedNft}){
             </div>
             )}
             <img className=" rounded-t-2xl" src={metadata.image} alt={metadata.name} />
-            <div className="mt-4 text-xl font-bold flex items-center px-4 text-blue-500">
-                Da Den Bu
-                <div className="bg-white w-6 h-6 rounded-full flex justify-center items-center ml-2">
-                    <SiGhostery size={18} />
+            <div className="mt-4 text-xl font-bold flex items-center px-4 text-red-500">
+                MY TENT
+                <div className="bg-white w-8 h-8 rounded-full flex justify-center items-center ml-2">
+                    <TbCampfire size={22} />
                 </div>
             </div>
-            <div className="mt-4 text-2xl font-bold px-4 text-blue-500"># {tokenId}</div>
+            <div className="mt-4 text-2xl font-bold px-4 text-red-500"># {tokenId}</div>
             <div className="mt-4 text-xl flex justify-end px-4">
                 <Link to={`${tokenId}`}>
-                <button disabled={parseInt(mintedNft) < tokenId} className="bg-gray-500 text-blue-500 px-4 py-2 rounded-xl hover:bg-gray-700">
+                <button disabled={parseInt(mintedNft) < tokenId} className="bg-gray-500 text-white px-4 py-2 rounded-xl hover:bg-gray-700">
                     Detail
                 </button>
                 </Link>
